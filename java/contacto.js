@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("formulario-compra");
+    const form = document.getElementById("formulario-contacto");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault(); // Previene el envío del formulario y la recarga de la página
@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Obtenemos los campos del formulario
         const nombre = document.getElementById("nombre");
-        const apellido = document.getElementById("apellido");
-        const mesa = document.getElementById("mesa");
-        const pedido = document.getElementById("pedido");
+        const email = document.getElementById("email");
+        const mensaje = document.getElementById("mensaje");
 
         // Limpiamos los mensajes de error previos
         limpiarErrores();
@@ -21,27 +20,22 @@ document.addEventListener("DOMContentLoaded", function () {
             mostrarError(nombre, "El nombre debe tener al menos 3 caracteres.");
         }
 
-        // Validación del apellido (mínimo 3 caracteres)
-        if (apellido.value.trim().length < 3) {
+        // Validación del correo electrónico (debe ser una dirección válida)
+        const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!regexEmail.test(email.value.trim())) {
             esFormularioValido = false;
-            mostrarError(apellido, "El apellido debe tener al menos 3 caracteres.");
+            mostrarError(email, "Por favor, ingresa un correo electrónico válido.");
         }
 
-        // Validación del número de mesa (debe ser mayor que 0)
-        if (mesa.value <= 0) {
+        // Validación del mensaje (mínimo 10 caracteres)
+        if (mensaje.value.trim().length < 10) {
             esFormularioValido = false;
-            mostrarError(mesa, "El número de personas debe ser mayor que 0.");
-        }
-
-        // Validación del pedido (mínimo 10 caracteres)
-        if (pedido.value.trim().length < 10) {
-            esFormularioValido = false;
-            mostrarError(pedido, "El pedido debe tener al menos 10 caracteres.");
+            mostrarError(mensaje, "El mensaje debe tener al menos 10 caracteres.");
         }
 
         // Si la validación es exitosa, mostramos un mensaje de éxito
         if (esFormularioValido) {
-            alert("Pedido enviado correctamente.");
+            alert("Mensaje enviado correctamente.");
             form.reset(); // Limpiar el formulario después de enviarlo
         } else {
             console.log("Errores encontrados. Corrige antes de enviar.");

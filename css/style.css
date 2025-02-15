@@ -344,6 +344,82 @@ footer p {
     font-size: 12px;
 }
 
-.is-invalid {
-    border: 2px solid red;
+/* Estilos para el Formulario de Contacto */
+.formulario-contacto {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.formulario-contacto h2 {
+    color: #856857;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto p {
+    font-size: 1.2rem;
+    color: #856857;
+    margin-bottom: 10px;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario-contacto .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.formulario-contacto label {
+    font-size: 1.1rem;
+    color: #856857;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    background: #f9f9f9;
+    color: #856857;
+}
+
+.formulario-contacto button {
+    background: #856857;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.formulario-contacto button:hover {
+    background: #6a4e38;
+}
+
+.is-invalid + span {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
