@@ -276,8 +276,8 @@ footer p {
     height: 30px;
 }
 
-/* Sección de formulario de contacto */
-.formulario-contacto {
+/* Sección de formulario de compra */
+.formulario-compra {
     padding: 50px 20px;
     text-align: center;
     background: #f9f9f9;
@@ -286,19 +286,19 @@ footer p {
     margin: 20px auto;
 }
 
-.formulario-contacto h2 {
+.formulario-compra h2 {
     color: #856857;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.formulario-contacto p {
+.formulario-compra p {
     font-size: 1.2rem;
     color: #856857;
     margin-bottom: 10px;
 }
 
-.formulario-contacto form {
+.formulario-compra form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,9 +306,9 @@ footer p {
     margin: 0 auto;
 }
 
-.formulario-contacto input,
-.formulario-contacto select,
-.formulario-contacto textarea {
+.formulario-compra input,
+.formulario-compra select,
+.formulario-compra textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -317,14 +317,14 @@ footer p {
     font-size: 1rem;
 }
 
-.formulario-contacto input[type="text"],
-.formulario-contacto input[type="email"],
-.formulario-contacto textarea {
+.formulario-compra input[type="text"],
+.formulario-compra input[type="number"],
+.formulario-compra textarea {
     background: #f9f9f9;
     color: #856857;
 }
 
-.formulario-contacto button {
+.formulario-compra button {
     background: #856857;
     color: white;
     border: none;
@@ -335,11 +335,15 @@ footer p {
     transition: background 0.3s;
 }
 
-.formulario-contacto button:hover {
+.formulario-compra button:hover {
     background: #6a4e38;
 }
 
-.formulario-contacto span {
+.formulario-compra span {
     color: red;
     font-size: 12px;
+}
+
+.is-invalid {
+    border: 2px solid red;
 }
